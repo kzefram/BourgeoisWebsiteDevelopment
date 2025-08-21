@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development"
+    />
+    <meta name="description" content="Karen Bourgeois Portfolio" />
+    <meta name="author" content="Karen Bourgeois" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bourgeois Website Development</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <div class="logo">
+        <img
+          src="../images/DesignNoBack.png"
+          alt="Bourgeois Website Development Logo"
+          width="75px"
+        />
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/services.html">Services</a>
+        <a href="../pages/portfolio.html">Portfolio</a>
+        <a href="../pages/resources.html">Resources</a>
+        <a href="../pages/contact.html">Contact</a>
+      </nav>
+      <div class="search-bar">
+        <input class="search-input" type="text" placeholder="Search..." />
+        <button class="search-button" type="submit">Search</button>
+      </div>
+      <div class="CTA">
+        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+
+    <section class="About-container">
+      <h1>About Me</h1>
+    </section>
+
+    <!-- TWO-COLUMN ALTERNATING LAYOUT -->
+    <section class="about-alt">
+      <div class="about-grid">
+        <!-- Row 1: Photo (L) → Content (R) -->
+        <figure class="about-photo">
+          <img src="../images/coverpic.png" alt="Portrait of Karen Bourgeois" />
+        </figure>
+        <div class="about-content shadow-box">
+          <h2>Who I Am</h2>
+          <p>
+            I&apos;m Karen Bourgeois, a web developer focused on responsive,
+            accessible, and SEO-friendly builds. I combine clean code with
+            thoughtful design so your site feels fast, intuitive, and on-brand.
+          </p>
+        </div>
+
+        <!-- Row 2: Content (L) → Photo (R) -->
+        <div class="about-content shadow-box">
+          <h2>My Journey</h2>
+          <p>
+            I started with hand coded HTML/CSS and grew into modern JavaScript
+            tooling and frameworks. I&apos;ve built sites for portfolios, local
+            businesses, and service providers—always sharpening craft and
+            process.
+          </p>
+        </div>
+        <figure class="about-photo">
+          <img
+            src="../images/tarn-nguyen-XlEafYGDvV0-unsplash.jpg"
+            alt="Karen working on web design"
+          />
+          <!-- Photo by
+          <a
+            href="https://unsplash.com/@sqrlsm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Tarn Nguyen</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/flat-screen-tv-XlEafYGDvV0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          > -->
+        </figure>
+
+        <!-- Row 3: Photo (L) → Content (R) -->
+        <figure class="about-photo">
+          <img
+            src="../images/niclas-illg-wzVQp_NRIHg-unsplash.jpg"
+            alt="Coding and design workspace"
+          />
+          <!-- Photo by
+          <a
+            href="https://unsplash.com/@nicklbaert?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Niclas Illg</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/black-logitech-g710-wireless-keyboard-and-wireless-mouse-near-gray-flat-screen-computer-monitor-on-table-wzVQp_NRIHg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          > -->
+        </figure>
+        <div class="about-content shadow-box">
+          <h2>What I Do</h2>
+          <p>
+            Custom websites, WordPress builds, landing pages, performance
+            tuning, and on page SEO. I deliver sites that look great, convert,
+            and are simple to maintain.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <div class="cta-content">
+        <h2>Ready to Get in Touch?</h2>
+        <p>
+          Let’s chat about your project or set up an appointment to discuss how
+          I can help bring your website to life.
+        </p>
+        <a href="../pages/contact.html" class="cta-btn">Contact Me</a>
+      </div>
+    </section>
+
+    <footer class="footer-container">
+      <p>
+        <br /><br />
+        &copy; <span id="current-year"></span> Karen Bourgeois. All rights
+        reserved. A website by Bourgeois Website Development.
+      </p>
+      <div class="social">
+        <ul class="icons">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61579091977188"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/bourgeois-website-development/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/kzefram"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>Follow us on social media for the latest updates!</p>
+        <br /><br />
+      </div>
+    </footer>
+
+    <script>
+      // Set the current year in the footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>

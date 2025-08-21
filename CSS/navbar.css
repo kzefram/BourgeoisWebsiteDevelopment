@@ -1,0 +1,148 @@
+/* ===== Navbar Styles ===== */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* CTA Button */
+.CTA a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.CTA a:hover {
+  background-color: #0056b3;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.search-button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav,
+  .search-bar,
+  .CTA {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  .mobile-menu a {
+    font-size: 18px;
+  }
+}
+
+.footer-container {
+  text-align: center;
+  background-color: lightblue;
+  color: white;
+}
+
+/* Social Media Icons */
+
+.social {
+  text-align: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.social .icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social .icons li {
+  display: inline-block;
+}
+
+.social .icons a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.social .icons a:hover {
+  color: #007bff;
+}

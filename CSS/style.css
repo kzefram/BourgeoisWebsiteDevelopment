@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/*****CLEARFIX****/
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+
+/*****FLEX CONTAINER*****/
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+  /* CTA box */
+  .cta-box {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 60px auto;
+    border-radius: 16px;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .cta-box h2 { font-size: 2rem; margin-bottom: 20px; }
+  .cta-box p { font-size: 1.1rem; margin-bottom: 30px; }
+
+  .cta-box .cta-btn {
+    text-decoration: none;
+    color: #007bff;
+    background: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+     transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  }
+
+  .cta-box .cta-btn:hover {
+    background: #f1f1f1;
+    color: #0056b3;
+  }
+
+  /* Responsive: stack columns on small screens */
+  @media (max-width: 900px) {
+    .about-alt { padding: 50px 20px; max-width: 100%; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo img { max-width: 100%; }
+    .about-content:nth-of-type(odd) { margin-top: 0; }
+  }
+
+/*****ABOUT US*****/
+
+/* Keep your existing About-container styles as-is */
+
+/* Two-column + center photo layout */
+
+.About-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url(../images/introbourgeois.jpg);
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.About-container h1 {
+  font-size: 4rem;   /* scales with screen size */
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Adjust for tablets/phones */
+@media (max-width: 768px) {
+  .About-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Container spacing */
+.about-alt {
+  padding: 80px 50px;
+  max-width: 80%; /* keeps content at 80% of page width */
+  margin: 0 auto; /* centers the section */
+}
+
+/* 2-column grid with explicit order per cell (L→R) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Column 1 | Column 2 */
+  gap: 48px 48px; /* row gap | column gap */
+  align-items: center;
+}
+
+/* Photos */
+  .about-photo { 
+    margin: 0;
+    display: flex;              /* enable flex for centering */
+    justify-content: center;    /* center horizontally */
+    align-items: center;        /* center vertically */
+  }
+
+  .about-photo img {
+    max-width: 80%;             /* prevents stretching, keeps image centered */
+    height: auto;
+    border-radius: 16px;
+    display: block;
+  }
+
+/* Content cards with shadow (your "shadow boxes") */
+.shadow-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.about-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  line-height: 1.75;
+  color: #333;
+}
+
+/* Optional subtle stagger: give every odd content box a slight top offset */
+.about-content:nth-of-type(odd) {
+  margin-top: 10px;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .about-alt {
+    padding: 50px 20px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-content:nth-of-type(odd) {
+    margin-top: 0;
+  }
+}
+
+/* Hero Section */
+/* https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-text-on-it-MI9-PY5cyNs?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+.hero-container {
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgb(0, 0, 0, 0.7)
+    ),
+    url(../images/chi-liu-lWMMq8Hh6Dg-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.7)),
+    url(../images/chi-liu-lWMMq8Hh6Dg-unsplash.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex; /* added */
+  flex-direction: column; /* added */
+  justify-content: center; /* added */
+  align-items: center; /* added */
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  position: static;
+  top: 50%;
+  left: 50%;
+  transform: none;
+  color: #fff;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 70px;
+}
+
+.hero-links a {
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero-links a:hover {
+  background-color: #0056b3;
+}
+
+.hero-container h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.hero-container p {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
