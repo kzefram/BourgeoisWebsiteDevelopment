@@ -1,144 +1,139 @@
 /* General Body Styles */
 body {
   font-family: "Inter", sans-serif;
-  background-color: #f0f4f8; /* A light background for contrast */
-  color: #333;
+  background-color: #f9fafb;
+  color: #374151;
   margin: 0;
   padding: 0;
 }
 
-/* Page Header Banner */
+/* Page Banner */
 .page-header {
-  background-color: #1e3a8a; /* Dark Blue */
+  height: 40vh; /* Increased height for better look */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/slava-keyzman-qr4d407hSjo-unsplash.jpg);
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
   text-align: center;
-  position: relative;
-}
-
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Overlay for text readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added text shadow for readability */
 }
 
 .page-header h1 {
-  position: relative;
-  z-index: 1;
-  font-size: 3rem;
-  margin: 0;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
-/* Main Content Container */
+/* Main Container */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px 16px;
 }
 
-/* Intro Paragraph */
-.intro-paragraph {
+/* Introduction Section */
+.intro-section {
   text-align: center;
-  max-width: 750px;
-  margin: 20px auto 60px;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+}
+
+.intro-section p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 24px;
 }
 
 /* Section Heading */
 .section-heading {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #1e3a8a; /* Dark Blue */
-  margin-top: 40px;
-  margin-bottom: 40px;
-  position: relative;
+  color: #1f2937;
+  margin-bottom: 48px;
 }
 
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #38bdf8; /* Light Blue */
-  margin: 10px auto 0;
-}
-
-/* Projects Grid */
-.projects-grid {
+/* Portfolio Grid */
+.portfolio-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default to single column */
+  grid-template-columns: 1fr;
   gap: 32px;
+  margin-bottom: 64px;
 }
 
-/* Project Card */
-.project-card {
+/* Portfolio Card */
+.portfolio-card {
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.project-card img {
+.portfolio-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  display: block;
 }
 
-.project-card-content {
+.portfolio-card-content {
   padding: 24px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.project-card-content h3 {
+.portfolio-card h3 {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e3a8a; /* Dark Blue */
+  font-weight: 700;
+  color: #1f2937;
   margin: 0 0 12px 0;
 }
 
-.project-card-content p {
-  color: #555;
+.portfolio-card p {
+  color: #4b5563;
   margin: 0 0 24px 0;
-  line-height: 1.6;
   flex-grow: 1;
 }
 
+/* Button Styles */
 .btn {
   display: inline-block;
-  color: #ffffff;
-  background-color: #007bff; /* Updated to match CTA blue */
   padding: 12px 24px;
+  margin-top: auto; /* Pushes button to the bottom */
   border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Updated to match CTA hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
 }
 
 /* CTA Section */
@@ -156,7 +151,6 @@ body {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 .cta-box p {
   font-size: 1.1rem;
   margin-bottom: 30px;
@@ -182,34 +176,31 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- Media Queries for Responsiveness --- */
+/* Responsive Breakpoints */
 
-/* Cell Phones (and smaller screens) */
+/* Mobile Phones */
 @media (max-width: 767px) {
   .page-header h1 {
     font-size: 2.5rem;
   }
   .section-heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  .project-card-content h3 {
+  .portfolio-card h3 {
     font-size: 1.25rem;
-  }
-  .cta-box h2 {
-    font-size: 1.75rem;
   }
 }
 
 /* Tablets */
 @media (min-width: 768px) {
-  .projects-grid {
+  .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Laptops/Desktops */
+/* Desktops */
 @media (min-width: 1024px) {
-  .projects-grid {
+  .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development, wordpress, responsive design, mobile first design, e-commerce, website maintenance, website hosting, website security"
+    />
+    <meta name="description" content="Karen Bourgeois Portfolio" />
+    <meta name="author" content="Karen Bourgeois" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bourgeois Website Development</title>
+    <link rel="stylesheet" href="../CSS/contact.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <div class="logo">
+        <img
+          src="../images/DesignNoBack.png"
+          alt="Bourgeois Website Development Logo"
+          width="75px"
+        />
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/services.html">Services</a>
+        <a href="../pages/portfolio.html">Portfolio</a>
+        <a href="../pages/contact.html">Contact</a>
+      </nav>
+      <div class="search-bar">
+        <input class="search-input" type="text" placeholder="Search..." />
+        <button class="search-button" type="submit">Search</button>
+      </div>
+      <div class="CTA">
+        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+
+    <!-- Page Header Banner -->
+    <section class="page-header contact-banner-bg">
+      <h1>Contact Us</h1>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Blurb Section -->
+      <div class="intro-section">
+        <h1>Let's Connect</h1>
+        <p>
+          We're here to answer your questions and help you get started on your
+          next web project. Whether you have a specific idea in mind or just
+          want to learn more about our services, feel free to reach out using
+          the form below.
+        </p>
+      </div>
+
+      <!-- Contact Form Section -->
+      <div class="contact-form-container">
+        <h2 class="section-heading">Send a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Booking Section -->
+      <div class="booking-section">
+        <h2 class="section-heading" style="margin-bottom: 16px">
+          Prefer a Face-to-Face?
+        </h2>
+        <p>
+          If you'd rather discuss your project in person or over a video call,
+          you can schedule a free consultation at your convenience.
+        </p>
+        <a href="#" class="btn btn-primary">Book an Appointment</a>
+      </div>
+
+      <!-- CTA Section -->
+      <section class="cta-box">
+        <h2>Looking for More Information?</h2>
+        <p>
+          Explore our portfolio to see our work or learn more about our process
+          and services. We're dedicated to transparency and helping you make an
+          informed decision.
+        </p>
+        <div class="intro-buttons">
+          <a href="../pages/about.html" class="btn btn-secondary">About</a>
+          <a href="../pages/portfolio.html" class="btn btn-secondary"
+            >Portfolio</a
+          >
+          <a href="#" class="btn btn-secondary">Resources</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-container">
+      <p>
+        <br /><br />
+        &copy; <span id="current-year"></span> Karen Bourgeois. All rights
+        reserved. A website by Bourgeois Website Development.
+      </p>
+      <div class="social">
+        <ul class="icons">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61579091977188"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/bourgeois-website-development/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>Follow us on social media for the latest updates!</p>
+        <br /><br />
+      </div>
+    </footer>
+
+    <script>
+      // Set the current year in the footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
