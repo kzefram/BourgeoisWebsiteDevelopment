@@ -138,6 +138,22 @@
 .About-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
     url(../images/introbourgeois.jpg);
+
+}
+
+.about-container-text{
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 3.2rem;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+
 }
 
 .services-container {
@@ -168,7 +184,7 @@
 
 .about-photo img {
   max-width: 100%;
-  height: auto;
+  height: 40vh;
   border-radius: 16px;
   display: block;
 }
