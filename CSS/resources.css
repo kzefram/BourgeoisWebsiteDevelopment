@@ -1,0 +1,103 @@
+  /* Basic body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937; /* Default text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for centering content */
+        .container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem; /* p-8 for spacing */
+        }
+
+        /* Main title styling */
+        .main-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem; /* Adjusted margin for intro paragraph */
+        }
+        
+        /* Introduction paragraph styling */
+        .intro-paragraph {
+            text-align: center;
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 3rem auto; /* Center the paragraph and add bottom margin */
+        }
+
+        /* Grid container for the cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* default to one column */
+            gap: 2rem; /* gap-8 */
+        }
+
+        /* Card styling */
+        .card {
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            padding: 1.5rem; /* p-6 */
+            transition: transform 0.3s ease-in-out; /* transition classes */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* hover:scale-105 */
+        }
+        
+        /* Alternating card colors */
+        .card:nth-child(odd) {
+            background-color: #3b82f6; /* Main blue */
+        }
+        
+        .card:nth-child(even) {
+            background-color: #93c5fd; /* Light blue */
+        }
+
+        .card h2 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        
+        /* Text color for dark blue cards */
+        .card:nth-child(odd) h2,
+        .card:nth-child(odd) p {
+            color: #ffffff;
+        }
+
+        /* Text color for light blue cards for better contrast */
+        .card:nth-child(even) h2,
+        .card:nth-child(even) p {
+            color: #1e3a8a; /* A darker blue for readability */
+        }
+
+
+        /* Responsive media queries */
+        @media (min-width: 768px) { /* md breakpoint */
+            .container {
+                padding: 2rem; /* md:p-8 */
+            }
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.25rem;
+            }
+            .intro-paragraph {
+                font-size: 1rem;
+            }
+        }
