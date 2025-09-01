@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/about.css" />
     <link rel="stylesheet" href="../CSS/navbar.css" />
     <link
       rel="stylesheet"
@@ -20,7 +21,7 @@
   </head>
 
   <body>
-    <header class="header-container">
+    <header class="header-container off-screen-menu">
       <div class="logo">
         <img
           src="../images/DesignNoBack.png"
@@ -43,84 +44,106 @@
       <div class="CTA">
         <a href="../pages/contact.html" class="cta-button">Contact Us</a>
       </div>
+      <div class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/services.html">Services</a>
+        <a href="../pages/portfolio.html">Portfolio</a>
+        <a href="../pages/Resources.html">Resources</a>
+        <a href="../pages/contact.html">Contact</a>
+      </div>
     </header>
 
     <!-- Content -->
 
-    <section class="About-container">
-      <h1>About Me</h1>
-    </section>
+    <!-- About Page Content Start -->
+    <div class="container">
+      <!-- Section: Title -->
+      <div class="title-section">
+        <h1>About Our Journey</h1>
+        <p>Learning, growing, and creating with passion.</p>
+      </div>
+      <br /><br />
 
-    <!-- TWO-COLUMN ALTERNATING LAYOUT -->
-    <section class="about-alt">
-      <div class="about-grid">
-        <!-- Row 1: Photo (L) → Content (R) -->
-        <figure class="about-photo">
-          <img src="../images/coverpic.png" alt="Portrait of Karen Bourgeois" />
-        </figure>
-        <div class="about-content shadow-box">
-          <h2>Who I Am</h2>
+      <!-- Row 1: Text Left, Image Right -->
+      <div class="row">
+        <div class="column content-text">
+          <h2>Our Mission</h2>
           <p>
-            I&apos;m Karen Bourgeois, a web developer focused on responsive,
-            accessible, and SEO-friendly builds. I combine clean code with
-            thoughtful design so your site feels fast, intuitive, and on-brand.
+            We are dedicated to crafting beautiful, functional, and
+            user-friendly digital experiences. Our passion lies in the
+            intersection of design and technology, where we strive to build
+            solutions that not only look great but also solve real-world
+            problems. We believe in continuous learning and collaboration to
+            achieve the best results.
+          </p>
+          <p>
+            From simple portfolios to complex web applications, our goal is to
+            deliver high-quality products that exceed expectations and provide
+            lasting value to our clients and users.
           </p>
         </div>
-
-        <!-- Row 2: Content (L) → Photo (R) -->
-        <div class="about-content shadow-box">
-          <h2>My Journey</h2>
-          <p>
-            I started with hand coded HTML/CSS and grew into modern JavaScript
-            tooling and frameworks. I&apos;ve built sites for portfolios, local
-            businesses, and service providers—always sharpening craft and
-            process.
-          </p>
-        </div>
-        <figure class="about-photo">
-          <img
-            src="../images/tarn-nguyen-XlEafYGDvV0-unsplash.jpg"
-            alt="Karen working on web design"
-          />
-          <!-- Photo by
-          <a
-            href="https://unsplash.com/@sqrlsm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Tarn Nguyen</a
-          >
-          on
-          <a
-            href="https://unsplash.com/photos/flat-screen-tv-XlEafYGDvV0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          > -->
-        </figure>
-
-        <!-- Row 3: Photo (L) → Content (R) -->
-        <figure class="about-photo">
+        <div class="column">
           <img
             src="../images/niclas-illg-wzVQp_NRIHg-unsplash.jpg"
-            alt="Coding and design workspace"
+            alt="A modern and clean workspace with a laptop and a plant"
+            class="content-image"
           />
-          <!-- Photo by
-          <a
-            href="https://unsplash.com/@nicklbaert?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Niclas Illg</a
-          >
-          on
-          <a
-            href="https://unsplash.com/photos/black-logitech-g710-wireless-keyboard-and-wireless-mouse-near-gray-flat-screen-computer-monitor-on-table-wzVQp_NRIHg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          > -->
-        </figure>
-        <div class="about-content shadow-box">
-          <h2>What I Do</h2>
-          <p>
-            Custom websites, WordPress builds, landing pages, performance
-            tuning, and on page SEO. I deliver sites that look great, convert,
-            and are simple to maintain.
-          </p>
         </div>
       </div>
-    </section>
+
+      <!-- Row 2: Image Left, Text Right -->
+      <div class="row reverse">
+        <div class="column content-text">
+          <h2>My Journey</h2>
+          <p>
+            I started with hand-coded HTML & CSS and grew into modern JavaScript
+            tooling and frameworks. I've built sites for portfolios, local
+            businesses, and service providers—always sharpening craft and
+            process. This journey has been one of constant evolution, adapting
+            to new technologies and design trends while staying true to the core
+            principles of good web development.
+          </p>
+          <p>
+            Every project is an opportunity to learn something new and to push
+            the boundaries of what's possible. I am excited to see where this
+            path leads next.
+          </p>
+        </div>
+        <div class="column">
+          <img
+            src="../images/kelly-sikkema-Tn8DLxwuDMA-unsplash.jpg"
+            alt="A person holding various green plants"
+            class="content-image"
+          />
+        </div>
+      </div>
+
+      <!-- Row 3: Text Left, Image Right -->
+      <div class="row">
+        <div class="column content-text">
+          <h2>Our Values</h2>
+          <p>
+            Integrity, quality, and collaboration are the core values that guide
+            our work. We believe in transparent communication and building
+            strong relationships with our clients. We're committed to writing
+            clean, maintainable code and designing with the end-user in mind.
+          </p>
+          <p>
+            Our dedication to these principles ensures that we not only meet but
+            also exceed the standards of excellence in the web development
+            industry.
+          </p>
+        </div>
+        <div class="column">
+          <img
+            src="../images/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg"
+            alt="A team collaborating around a table"
+            class="content-image"
+          />
+        </div>
+      </div>
+    </div>
 
     <section class="cta-box">
       <div class="cta-content">
@@ -164,12 +187,6 @@
       </div>
     </footer>
 
-    <script>
-      // Set the current year in the footer
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-      });
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>

@@ -151,187 +151,48 @@
   line-height: 1.2;
 }
 
-/* ==========================================================================
-   About Section
-   ========================================================================== */
-.about-alt {
-  padding: 50px 20px;
-  margin: 0 auto;
-}
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  align-items: center;
-}
-
-.about-photo img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
+.ham-menu span {
   display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
 }
 
-.shadow-box {
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.about-content p {
-  line-height: 1.75;
-  color: #333;
-}
-
-/* ==========================================================================
-   Services Section
-   ========================================================================== */
-.intro-section {
-  text-align: center;
-  max-width: 768px;
-  margin: 0 auto 64px auto;
-}
-
-.intro-section h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 16px;
-  letter-spacing: -0.025em;
-}
-
-.intro-section p {
-  font-size: 1.125rem;
-  color: #4b5563;
-  margin-bottom: 24px;
-}
-
-.intro-buttons {
-  margin-top: 32px;
-}
-
-.services-grid,
-.options-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 64px;
-}
-
-.service-card,
-.option-card {
-  padding: 32px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover,
-.option-card:hover {
-  transform: scale(1.05);
-}
-
-.service-card {
-  color: white;
-}
-
-.service-card.blue,
-.option-card.blue {
-  background-color: #007bff;
-  color: white;
-}
-
-.service-card.light-blue,
-.option-card.light-blue {
-  background-color: #eaf6ff;
-  color: #1f2937;
-}
-
-.service-card .icon-wrapper {
-  margin-bottom: 24px;
-  display: inline-block;
-  background-color: white;
-  padding: 20px;
-  border-radius: 9999px;
-}
-
-.service-card .icon {
-  width: 40px;
-  height: 40px;
-  color: #007bff;
-}
-
-.service-card h3,
-.option-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  margin-bottom: 24px;
-  opacity: 0.9;
-}
-
-.service-card a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.service-card.blue a {
-  color: white;
-}
-
-.service-card.light-blue a {
-  color: #007bff;
-}
-
-.service-card a:hover {
-  text-decoration: underline;
-}
-
-.process-section {
-  display: flex;
+/* 2. Styles the menu that pops out (hidden by default) */
+.mobile-menu {
+  display: none;
   flex-direction: column;
-  gap: 24px;
+  gap: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.process-step {
-  background-color: #eaf6ff;
-  border: 1px solid #bde0fe;
-  border-radius: 8px;
-  padding: 24px;
+/* This class is added by JavaScript to SHOW the menu */
+.mobile-menu.is-open {
   display: flex;
-  align-items: center;
-  gap: 24px;
 }
 
-.process-step .step-number {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #007bff;
-  flex-shrink: 0;
-}
+/* 3. This is the rule that turns the hamburger menu ON for smaller screens */
+@media (max-width: 900px) {
+  /* Hides the desktop navigation */
+  nav,
+  .search-bar,
+  .CTA {
+    display: none;
+  }
 
-.process-step .step-content h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin: 0 0 8px 0;
-}
-
-.process-step .step-content p {
-  color: #4b5563;
-  margin: 0;
+  /* Shows the hamburger icon */
+  .ham-menu {
+    display: block;
+  }
 }
 
 /* ==========================================================================

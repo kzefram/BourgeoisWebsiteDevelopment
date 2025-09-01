@@ -21,28 +21,33 @@
 
   <body>
     <header class="header-container">
-      <div class="logo">
-        <img
-          src="../images/DesignNoBack.png"
-          alt="Bourgeois Website Development Logo"
-          width="75px"
-        />
-      </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
-      </div>
+        <div class="logo">
+            <img src="../images/DesignNoBack.png" alt="Bourgeois Website Development Logo" />
+        </div>
+
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="nav-content">
+            <nav class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../pages/about.html">About</a>
+                <a href="../pages/services.html">Services</a>
+                <a href="../pages/portfolio.html">Portfolio</a>
+                <a href="../pages/Resources.html">Resources</a>
+                <a href="../pages/contact.html">Contact</a>
+            </nav>
+            <div class="search-bar">
+                <input class="search-input" type="text" placeholder="Search..." />
+                <button class="search-button" type="submit">Search</button>
+            </div>
+            <div class="CTA">
+                <a href="../pages/contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
     </header>
 
     <!-- Content -->
@@ -256,6 +261,22 @@
       document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("current-year").textContent =
           new Date().getFullYear();
+      });
+    </script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".main-nav");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".main-nav");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
       });
     </script>
   </body>

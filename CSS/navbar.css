@@ -113,7 +113,11 @@ nav a:hover {
 
 .footer-container {
   text-align: center;
-  background-color: lightblue;
+  background-color: #1f2937;
+  color: white;
+}
+
+.footer-container a {
   color: white;
 }
 
@@ -146,3 +150,4 @@ nav a:hover {
 .social .icons a:hover {
   color: #007bff;
 }
+
