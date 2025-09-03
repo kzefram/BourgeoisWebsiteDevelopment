@@ -7,26 +7,17 @@
       name="keywords"
       content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development, wordpress, responsive design, mobile first design, e-commerce, website maintenance, website hosting, website security"
     />
-    <meta name="description" content="Karen Bourgeois Portfolio" />
+    <meta name="description" content="Bourgeois Website Development Portfolio" />
     <meta name="author" content="Karen Bourgeois" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
     <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/navbar.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <style>
-      /* General Body Styles */
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f9fafb; /* bg-gray-50 */
-        color: #1f2937; /* text-gray-800 */
-        margin: 0;
-        padding: 0;
-      }
-
       /* Container for the policy content */
       .container {
         width: 100%;
@@ -50,7 +41,10 @@
 
       /* Header section */
       .page-header {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 2.5rem;
       }
 
@@ -89,54 +83,88 @@
         padding-top: 1rem; /* pt-4 */
         border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
       }
-
-      /* Responsive adjustments */
-      @media (min-width: 640px) {
-        .container {
-          padding: 4rem 1.5rem; /* sm:py-16 sm:px-6 */
-        }
-        .policy-card {
-          padding: 3rem; /* sm:p-12 */
-        }
-        .page-header h1 {
-          font-size: 2.25rem; /* sm:text-4xl */
-        }
+      /* Links */
+      .privacy-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      @media (min-width: 1024px) {
-        .container {
-          padding-left: 2rem; /* lg:px-8 */
-          padding-right: 2rem;
-        }
+      .privacy-btn a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue; /* bg-blue-600 */
+        color: #ffffff; /* text-white */
+        padding: 0.75rem 1.5rem; /* py-3 px-6 */
+        border-radius: 50px; /* rounded-md */
+        text-decoration: none;
+        font-weight: 500; /* font-medium */
+        transition: background-color 0.3s ease;
       }
     </style>
   </head>
 
   <body>
-    <header class="header-container">
-      <div class="logo">
-        <img
-          src="../images/DesignNoBack.png"
-          alt="Bourgeois Website Development Logo"
-          width="75px"
-        />
-      </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
-      </div>
-    </header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+        <li><a href="../pages/Resources.html">Resources</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="../images/DesignNoBack.png"
+            alt="Bourgeois Website Development Logo"
+            width="75px"
+          />
+        </li>
+        <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="../pages/about.html">About</a></li>
+        <li class="hideOnMobile">
+          <a href="../pages/services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/portfolio.html">Portfolio</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/Resources.html">Resources</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/contact.html">Contact</a>
+        </li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- Content -->
 
@@ -247,8 +275,12 @@
             <a href="mailto:bourgeoiswebsites@gmail.com"
               >bourgeoiswebsites@gmail.com</a
             >
-            or by post to an address you would provide.
+            or by clicking the button below.
           </p>
+          <br /><br />
+          <div class="privacy-btn">
+            <a href="./contact.html">Contact Us</a>
+          </div>
           <br /><br /><br /><br />
         </div>
       </div>
@@ -285,20 +317,6 @@
       </div>
     </footer>
 
-    <script>
-      // Set the current year in the footer
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-      });
-    </script>
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".main-nav");
-
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>

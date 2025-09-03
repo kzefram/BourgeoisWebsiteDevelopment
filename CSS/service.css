@@ -39,10 +39,10 @@ body {
   align-items: center;
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added text shadow for readability */
+  
 }
 .page-header h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
@@ -310,20 +310,6 @@ body {
   background: #f1f1f1;
   color: #0056b3;
   transform: translateY(-2px);
-}
-
-/* Hamburger icon styles */
-.hamburger {
-  display: none; /* Hidden by default on larger screens */
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
 }
 
 /* Responsive Breakpoints */

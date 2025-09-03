@@ -12,8 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
     <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/about.css" />
-    <link rel="stylesheet" href="../CSS/navbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -21,53 +19,66 @@
   </head>
 
   <body>
-    <header class="header-container off-screen-menu">
-      <div class="logo">
-        <img
-          src="../images/DesignNoBack.png"
-          alt="Bourgeois Website Development Logo"
-          width="75px"
-        />
-      </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
-      </div>
-      <div class="mobile-menu">
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </div>
-    </header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              /></svg ></a>
+        </li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+        <li><a href="../pages/Resources.html">Resources</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="../images/DesignNoBack.png"
+            alt="Bourgeois Website Development Logo"
+            width="75px"
+          />
+        </li>
+        <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="../pages/about.html">About</a></li>
+        <li class="hideOnMobile">
+          <a href="../pages/services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/portfolio.html">Portfolio</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/Resources.html">Resources</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/contact.html">Contact</a>
+        </li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul>
+    </nav>
 
     <!-- Content -->
 
-    <!-- About Page Content Start -->
-    <div class="container">
-      <!-- Section: Title -->
-      <div class="title-section">
-        <h1>About Our Journey</h1>
-        <p>Learning, growing, and creating with passion.</p>
-      </div>
-      <br /><br />
+    <!-- Page Header Banner -->
+    <div class="about-banner-bg title-section">
+      <h1>About Our Journey</h1>
+      <p>Discover the story behind our passion for web development and design.</p>
+    </div>
 
+      <br /><br />
+    <div class="content-container">
       <!-- Row 1: Text Left, Image Right -->
       <div class="row">
-        <div class="column content-text">
+        <div class="column content-text ">
           <h2>Our Mission</h2>
           <p>
             We are dedicated to crafting beautiful, functional, and
@@ -83,7 +94,7 @@
             lasting value to our clients and users.
           </p>
         </div>
-        <div class="column">
+        <div class="column content-image">
           <img
             src="../images/niclas-illg-wzVQp_NRIHg-unsplash.jpg"
             alt="A modern and clean workspace with a laptop and a plant"
@@ -93,8 +104,15 @@
       </div>
 
       <!-- Row 2: Image Left, Text Right -->
-      <div class="row reverse">
-        <div class="column content-text">
+      <div class="row">        
+        <div class="column content-image">
+          <img
+            src="../images/tarn-nguyen-XlEafYGDvV0-unsplash.jpg"
+            alt="A person holding various green plants"
+            class="content-image"
+          />
+        </div>
+        <div class="column content-text ">
           <h2>My Journey</h2>
           <p>
             I started with hand-coded HTML & CSS and grew into modern JavaScript
@@ -110,18 +128,12 @@
             path leads next.
           </p>
         </div>
-        <div class="column">
-          <img
-            src="../images/kelly-sikkema-Tn8DLxwuDMA-unsplash.jpg"
-            alt="A person holding various green plants"
-            class="content-image"
-          />
-        </div>
+
       </div>
 
       <!-- Row 3: Text Left, Image Right -->
       <div class="row">
-        <div class="column content-text">
+        <div class="column content-text ">
           <h2>Our Values</h2>
           <p>
             Integrity, quality, and collaboration are the core values that guide
@@ -135,7 +147,7 @@
             industry.
           </p>
         </div>
-        <div class="column">
+        <div class="column content-image">
           <img
             src="../images/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg"
             alt="A team collaborating around a table"
@@ -144,6 +156,8 @@
         </div>
       </div>
     </div>
+    
+    <!-- End of About Section -->
 
     <section class="cta-box">
       <div class="cta-content">
