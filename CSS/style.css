@@ -64,10 +64,6 @@ body {
   transition: background-color 0.3s;
 }
 
-.hero-links a:hover {
-  background-color: #0056b3;
-}
-
 /* ==========================================================================
     Menu Styles
   ===========================================================================*/
@@ -349,8 +345,13 @@ nav li:first-child {
   font-size: 1.125rem;
   margin-bottom: 24px;
 }
-.contact-form-container .section-heading {
-  margin-bottom: 32px;
+/* Contact Form Styles */
+.contact-form-container {
+  margin: 64px auto;
+  padding: 48px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 .form-group {
   margin-bottom: 24px;
@@ -362,21 +363,18 @@ nav li:first-child {
   color: #374151;
   margin-bottom: 8px;
 }
-.form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
   color: #1f2937;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
 }
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
+.form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #007bff;
@@ -397,11 +395,23 @@ nav li:first-child {
   font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 .submit-btn:hover {
   background-color: #0056b3;
-  transform: translateY(-2px);
+}
+
+/* --- CRITICAL CSS FOR VALIDATION ERRORS --- */
+/* This selector is now more specific to ensure it overrides other styles */
+.form-group .error-field {
+  border-color: #dc3545 !important; /* Red border for error */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25) !important;
+}
+.error-message {
+  color: #dc3545; /* Red text for error message */
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: none; /* Hidden by default, JS will make it visible */
 }
 
 /* ==========================================================================
@@ -532,6 +542,9 @@ nav li:first-child {
 
   .column {
     width: 50%;
+  }
+  .hero-links {
+    flex-direction: row;
   }
 }
 
