@@ -76,6 +76,10 @@
             color: #1e3a8a; /* A darker blue for readability */
         }
 
+        .card a {
+            color: #ffffff; /* text-white */
+        }
+
 
         /* Responsive media queries */
         @media (min-width: 768px) { /* md breakpoint */

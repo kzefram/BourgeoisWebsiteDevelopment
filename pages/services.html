@@ -7,7 +7,10 @@
       name="keywords"
       content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development, wordpress, responsive design, mobile first design, e-commerce, website maintenance, website hosting, website security"
     />
-    <meta name="description" content="Bourgeois Website Development Portfolio" />
+    <meta
+      name="description"
+      content="Bourgeois Website Development Portfolio"
+    />
     <meta name="author" content="Karen Bourgeois" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
@@ -32,7 +35,8 @@
             >
               <path
                 d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
-              /></svg ></a>
+              /></svg
+          ></a>
         </li>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../pages/about.html">About</a></li>
@@ -43,11 +47,12 @@
       </ul>
       <ul>
         <li>
-          <img
-            src="../images/DesignNoBack.png"
-            alt="Bourgeois Website Development Logo"
-            width="75px"
-          />
+          <a href="../index.html"
+            ><img
+              src="../images/DesignNoBack.png"
+              alt="Bourgeois Website Development Logo"
+              width="75px"
+          /></a>
         </li>
         <li class="hideOnMobile"><a href="../index.html">Home</a></li>
         <li class="hideOnMobile"><a href="../pages/about.html">About</a></li>
@@ -63,7 +68,19 @@
         <li class="hideOnMobile">
           <a href="../pages/contact.html">Contact</a>
         </li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+              /></svg
+          ></a>
+        </li>
       </ul>
     </nav>
 
@@ -85,8 +102,8 @@
         </p>
         <p>Find out more about my work or get in touch below.</p>
         <div class="intro-buttons">
-          <a href="#" class="btn btn-primary">About Me</a>
-          <a href="#" class="btn btn-secondary">Contact Me</a>
+          <a href="../pages/about.html" class="btn btn-primary">About Me</a>
+          <a href="../pages/contact.html" class="btn btn-secondary">Contact Me</a>
         </div>
       </div>
 
@@ -110,13 +127,16 @@
               />
             </svg>
           </div>
-          <h3>Custom Website Development</h3>
-          <p>
-            Unique, hand-coded websites built from the ground up for optimal
-            performance, security, and a pixel-perfect design that matches your
-            brand.
-          </p>
-          <a href="#">Learn More</a>
+          <h3>Plan 1</h3>
+          <ul class="service-list">
+            <li>Responsive Design</li>
+            <li>Performance Optimization</li>
+            <li>Cross-Browser Compatibility</li>
+            <li>3 Pages</li>
+            <li>15 Pictures</li>
+            <li>SSL Certificate</li>
+          </ul>
+          <h3 class="price">$300</h3>
         </div>
 
         <!-- Service Card 2: WordPress Solutions -->
@@ -137,13 +157,19 @@
               />
             </svg>
           </div>
-          <h3>WordPress Solutions</h3>
-          <p>
-            Powerful and easy-to-manage websites using WordPress. Perfect for
-            blogs, e-commerce, and businesses that need to update content
-            frequently.
-          </p>
-          <a href="#">Learn More</a>
+          <h3>Plan 2</h3>
+
+          <ul class="service-list">
+            <li>Custom WordPress Themes</li>
+            <li>Plugin Integration</li>
+            <li>20 Pictures</li>
+            <li>Content Migration</li>
+            <li>SEO Optimization</li>
+            <li>5 Pages</li>
+            <li>Ongoing Maintenance</li>
+          </ul>
+
+          <h3 class="price">$500</h3>
         </div>
 
         <!-- Service Card 3: SEO Optimization -->
@@ -164,13 +190,19 @@
               />
             </svg>
           </div>
-          <h3>SEO Optimization</h3>
-          <p>
-            Improve your search engine ranking and attract more organic traffic
-            with our proven SEO strategies, including keyword research and
-            on-page optimization.
-          </p>
-          <a href="#">Learn More</a>
+          <h3>Plan 3</h3>
+          <ul class="service-list">
+            <li>Comprehensive SEO Audit</li>
+            <li>Keyword Research</li>
+            <li>On-Page Optimization</li>
+            <li>Content Recommendations</li>
+            <li>Backlink Analysis</li>
+            <li>Performance Tracking</li>
+            <li>8 Pages</li>
+            <li>30 Pictures</li>
+
+          </ul>
+          <h3 class="price">$750</h3>
         </div>
       </div>
 
@@ -216,18 +248,19 @@
       <h2 class="section-heading">Extra Options</h2>
       <div class="options-grid">
         <!-- Row 1 -->
-        <div class="option-card blue"><h3>Landing Page</h3></div>
-        <div class="option-card light-blue"><h3>Add a Page</h3></div>
-        <div class="option-card blue"><h3>SEO Audits</h3></div>
+        <div class="option-card blue"><h3>Landing Page - $150</h3></div>
+        <div class="option-card light-blue"><h3>Add a Page - $50</h3></div>
+        <div class="option-card blue"><h3>SEO Audits - $200</h3></div>
         <!-- Row 2 -->
-        <div class="option-card light-blue"><h3>Plugin Updates</h3></div>
-        <div class="option-card blue"><h3>Domain Name</h3></div>
-        <div class="option-card light-blue"><h3>Website Hosting</h3></div>
+        <div class="option-card light-blue"><h3>Plugin Updates - $25/year</h3></div>
+        <div class="option-card blue"><h3>Domain Name - $25/year</h3></div>
+        <div class="option-card light-blue"><h3>Website Hosting - $100/year</h3></div>
         <!-- Row 3 -->
-        <div class="option-card blue"><h3>Content Writing</h3></div>
-        <div class="option-card light-blue"><h3>Speed Optimization</h3></div>
-        <div class="option-card blue"><h3>WordPress Conversion</h3></div>
-      </div><br><br>
+        <div class="option-card blue"><h3>Content Writing - $25/500 words</h3></div>
+        <div class="option-card light-blue"><h3>Speed Optimization - $75</h3></div>
+        <div class="option-card blue"><h3>WordPress Conversion - $50/page</h3></div>
+      </div>
+      <br /><br />
 
       <!-- CTA Section -->
       <section class="cta-box">
@@ -236,7 +269,7 @@
           Let’s chat about your project or set up an appointment to discuss how
           I can help bring your website to life.
         </p>
-        <a href="#" class="cta-btn">Contact Me</a>
+        <a href="../pages/contact.html" class="cta-btn">Contact Me</a>
       </section>
     </div>
 
