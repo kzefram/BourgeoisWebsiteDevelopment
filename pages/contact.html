@@ -7,12 +7,11 @@
       name="keywords"
       content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development, wordpress, responsive design, mobile first design, e-commerce, website maintenance, website hosting, website security"
     />
-    <meta name="description" content="Karen Bourgeois Portfolio" />
+    <meta name="description" content="Bourgeois Website Development Portfolio" />
     <meta name="author" content="Karen Bourgeois" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
-    <link rel="stylesheet" href="../CSS/contact.css" />
-    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,30 +19,33 @@
   </head>
 
   <body>
-    <header class="header-container">
-      <div class="logo">
-        <img
-          src="../images/DesignNoBack.png"
-          alt="Bourgeois Website Development Logo"
-          width="75px"
-        />
-      </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
-      </div>
-    </header>
+    <nav >
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+        <li><a href="../pages/Resources.html">Resources</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="../images/DesignNoBack.png"
+            alt="Bourgeois Website Development Logo"
+            width="75px"
+          />
+        </li>
+        <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="../pages/about.html">About</a></li>
+        <li class="hideOnMobile"><a href="../pages/services.html">Services</a></li>
+        <li class="hideOnMobile"><a href="../pages/portfolio.html">Portfolio</a></li>
+        <li class="hideOnMobile"><a href="../pages/Resources.html">Resources</a></li>
+        <li class="hideOnMobile"><a href="../pages/contact.html">Contact</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+    </nav>
 
     <!-- Content -->
 
@@ -53,9 +55,9 @@
     </section>
 
     <!-- Main Content -->
-    <div class="container">
+    <div class="container-contact">
       <!-- Blurb Section -->
-      <div class="intro-section">
+      <div class="intro-section-contact">
         <h1>Let's Connect</h1>
         <p>
           We're here to answer your questions and help you get started on your
@@ -64,22 +66,28 @@
           the form below.
         </p>
       </div>
-
+      
       <!-- Contact Form Section -->
       <div class="contact-form-container">
         <h2 class="section-heading">Send a Message</h2>
-        <form id="contactForm">
+        <form id="contactForm" action="https://getform.io/f/bvrmmlkb" method="post" novalidate>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required />
+            <!-- This div is where the name error message will appear -->
+            <div class="error-message" id="nameError"></div>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" required />
+            <!-- This div is where the email error message will appear -->
+            <div class="error-message" id="emailError"></div>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6" required></textarea>
+            <!-- This div is where the message error message will appear -->
+            <div class="error-message" id="messageError"></div>
           </div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
@@ -94,7 +102,7 @@
           If you'd rather discuss your project in person or over a video call,
           you can schedule a free consultation at your convenience.
         </p>
-        <a href="#" class="btn btn-primary">Book an Appointment</a>
+        <a href="https://calendar.app.google/WGeLwPVs1fAL6hBK9" class="btn btn-primary" target="_blank">Book an Appointment</a>
       </div>
 
       <!-- CTA Section -->
@@ -105,12 +113,12 @@
           and services. We're dedicated to transparency and helping you make an
           informed decision.
         </p>
-        <div class="intro-buttons">
+        <div class="intro-buttons-contact">
           <a href="../pages/about.html" class="btn btn-secondary">About</a>
           <a href="../pages/portfolio.html" class="btn btn-secondary"
             >Portfolio</a
           >
-          <a href="#" class="btn btn-secondary">Resources</a>
+          <a href="../pages/Resources.html" class="btn btn-secondary">Resources</a>
         </div>
       </section>
     </div>
@@ -146,12 +154,6 @@
       </div>
     </footer>
 
-    <script>
-      // Set the current year in the footer
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-      });
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>

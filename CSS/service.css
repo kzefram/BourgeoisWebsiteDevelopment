@@ -39,10 +39,10 @@ body {
   align-items: center;
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added text shadow for readability */
+  
 }
 .page-header h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
@@ -330,6 +330,9 @@ body {
   .option-card h3 {
     font-size: 1.25rem;
   }
+  .hamburger {
+    display: block; /* Show the hamburger icon on small screens */
+  }
 }
 
 /* Tablets */
@@ -337,6 +340,9 @@ body {
   .services-grid,
   .options-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .hamburger {
+    display: block; /* Show the hamburger icon on small screens */
   }
 }
 

@@ -25,26 +25,28 @@
         <img
           src="../images/DesignNoBack.png"
           alt="Bourgeois Website Development Logo"
-          width="75px"
         />
       </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
+
+
+      <div class="nav-content">
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/services.html">Services</a>
+          <a href="../pages/portfolio.html">Portfolio</a>
+          <a href="../pages/Resources.html">Resources</a>
+          <a href="../pages/contact.html">Contact</a>
+        </nav>
+        <div class="search-bar">
+          <input class="search-input" type="text" placeholder="Search..." />
+          <button class="search-button" type="submit">Search</button>
+        </div>
+        <div class="CTA">
+          <a href="../pages/contact.html" class="cta-button">Contact Us</a>
+        </div>
       </div>
     </header>
-
     <!-- Content -->
 
     <footer class="footer-container">
@@ -72,18 +74,13 @@
         </ul>
       </div>
       <div>
-        <p>Follow us on social media for the latest updates!</p><br>
+        <p>Follow us on social media for the latest updates!</p>
+        <br />
         <p><a href="../pages/privacy.html">Privacy Policy</a></p>
         <br /><br />
       </div>
     </footer>
 
-    <script>
-      // Set the current year in the footer
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-      });
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>

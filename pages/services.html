@@ -7,12 +7,12 @@
       name="keywords"
       content="HTML, CSS, JavaScript, Portfolio, Karen, Bourgeois, Karen Bourgeois, Web Development, Frontend Developer, search Engine Optimization, SEO, website design, website Development, wordpress, responsive design, mobile first design, e-commerce, website maintenance, website hosting, website security"
     />
-    <meta name="description" content="Karen Bourgeois Portfolio" />
+    <meta name="description" content="Bourgeois Website Development Portfolio" />
     <meta name="author" content="Karen Bourgeois" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourgeois Website Development</title>
     <link rel="stylesheet" href="../CSS/service.css" />
-    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -20,30 +20,52 @@
   </head>
 
   <body>
-    <header class="header-container">
-      <div class="logo">
-        <img
-          src="../images/DesignNoBack.png"
-          alt="Bourgeois Website Development Logo"
-          width="75px"
-        />
-      </div>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/services.html">Services</a>
-        <a href="../pages/portfolio.html">Portfolio</a>
-        <a href="../pages/Resources.html">Resources</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-      <div class="search-bar">
-        <input class="search-input" type="text" placeholder="Search..." />
-        <button class="search-button" type="submit">Search</button>
-      </div>
-      <div class="CTA">
-        <a href="../pages/contact.html" class="cta-button">Contact Us</a>
-      </div>
-    </header>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 96 960 960"
+              width="26"
+            >
+              <path
+                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+              /></svg ></a>
+        </li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+        <li><a href="../pages/Resources.html">Resources</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="../images/DesignNoBack.png"
+            alt="Bourgeois Website Development Logo"
+            width="75px"
+          />
+        </li>
+        <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="../pages/about.html">About</a></li>
+        <li class="hideOnMobile">
+          <a href="../pages/services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/portfolio.html">Portfolio</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/Resources.html">Resources</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="../pages/contact.html">Contact</a>
+        </li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+      </ul>
+    </nav>
 
     <!-- Content -->
 
@@ -205,7 +227,7 @@
         <div class="option-card blue"><h3>Content Writing</h3></div>
         <div class="option-card light-blue"><h3>Speed Optimization</h3></div>
         <div class="option-card blue"><h3>WordPress Conversion</h3></div>
-      </div>
+      </div><br><br>
 
       <!-- CTA Section -->
       <section class="cta-box">
@@ -251,12 +273,6 @@
       </div>
     </footer>
 
-    <script>
-      // Set the current year in the footer
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-      });
-    </script>
+    <script src="../JS/script.js"></script>
   </body>
 </html>
